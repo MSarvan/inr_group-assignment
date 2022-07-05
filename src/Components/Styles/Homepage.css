@@ -2,7 +2,22 @@
     width: 455px;
     height: 270px;
 }
+.btns {
+    display: flex;
+}
 .btns button {
     border: none;
     outline: none;
+    width: 260px;
+    height: fit-content;
+    background-color: #ffff;
+    text-align: left;
+}
+.uparr {
+    background: #e4e8eb;
+    border: 1px solid #e5e5e5;
+    height: 72px;
+    width: 65px;
+    box-sizing: border-box;
+    padding-top: 25px;
 }

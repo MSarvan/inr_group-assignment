@@ -1,0 +1,27 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "SAMSUNG Galaxy F12 (Sea Green, 64 GB)",
+        "price": 9999,
+        "image": "https://rukminim2.flixcart.com/image/312/312/kn22m4w0/mobile/a/q/8/galaxy-f12-sm-f127gzgiins-samsung-original-imagftmjw3xqg4yk.jpeg?q=70",
+        "category": "mobile",
+        "subcategory": "mobile",
+        "quantity" : 1,
+        "ratings": 4.3,
+        "description": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB 16.55 cm (6.515 inch) HD+ Display\n 48MP + 5MP + 2MP + 2MP | 8MP Front Camera \n6000 mAh Lithium-ion Battery \nExynos 850 Processor \n 1 Year Warranty Provided by the Manufacturer from Date of Purchase"
+      },
+      {
+        "id": 1,
+        "name": "SAMSUNG Galaxy F12 (Sea Green, 64 GB)",
+        "price": 9999,
+        "image": "https://rukminim2.flixcart.com/image/312/312/kn22m4w0/mobile/a/q/8/galaxy-f12-sm-f127gzgiins-samsung-original-imagftmjw3xqg4yk.jpeg?q=70",
+        "category": "mobile",
+        "subcategory": "mobile",
+        "quantity" : 1,
+        "ratings": 4.3,
+        "description": "4 GB RAM | 64 GB ROM | Expandable Upto 512 GB 16.55 cm (6.515 inch) HD+ Display\n 48MP + 5MP + 2MP + 2MP | 8MP Front Camera \n6000 mAh Lithium-ion Battery \nExynos 850 Processor \n 1 Year Warranty Provided by the Manufacturer from Date of Purchase"
+      }
+    ]
+}
+

@@ -7,7 +7,7 @@ import img2 from "./Images/Img-2.png";
 import img3 from "./Images/Img-3.png";
 import all from "./Images/Group 12028.png"
 import menu1 from "./Images/Group 12026.png"
-import menu2 from "./Images/Group 12026.png"
+import menu2 from "./Images/Group 12029.png"
 import menu3 from "./Images/Group 12030.png"
 import menu4 from "./Images/Group 12031.png"
 import upArr from "./Images/Up-arr-icon.png"
@@ -27,9 +27,12 @@ export const Homepage = () => {
         <button><img src={menu2} alt="" /></button>
         <button><img src={menu3} alt="" /></button>
         <button><img src={menu4} alt="" /></button>
-        <img src={upArr} alt="" />
+        <div className="uparr"><img src={upArr} alt=""/></div>
       </div>
       <Footer />
     </div>
   );
 };
+
+//5stars "https://i.ibb.co/hFhXB1f/Group-11996.png"
+//Product "https://i.ibb.co/QMX4rjr/Product.png"
