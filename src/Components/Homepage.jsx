@@ -13,13 +13,41 @@ import menu4 from "./Images/Group 12031.png"
 import upArr from "./Images/Up-arr-icon.png"
 
 export const Homepage = () => {
+
+    function BasicUsage() {
+        var { isOpen, onOpen, onClose } = useDisclosure()
+        return (
+          <>
+            {/* <Button onClick={onOpen}>Open Modal</Button> */}
+      
+            <Modal isOpen={isOpen} onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Modal Title</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <Lorem count={2} />
+                </ModalBody>
+      
+                <ModalFooter>
+                  <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    Close
+                  </Button>
+                  <Button variant='ghost'>Secondary Action</Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
+          </>
+        )
+      }
+
   return (
     <div>
       <Navbar />
       <div className="container">
         <img src={img1} alt="1" />
         <img src={img2} alt="2" />
-        <img src={img3} alt="3" />
+        <img src={img3} alt="3" onClick={onOpen}/>
       </div>
       <div className="btns">
         <button><img src={all} alt="" /></button>
@@ -36,3 +64,5 @@ export const Homepage = () => {
 
 //5stars "https://i.ibb.co/hFhXB1f/Group-11996.png"
 //Product "https://i.ibb.co/QMX4rjr/Product.png"
+//Thumbsup "https://i.ibb.co/8nkZ8YL/Group-11995.png"
+//Message "https://i.ibb.co/T04z9rv/Group.png"
