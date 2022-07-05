@@ -1,10 +1,11 @@
 import './App.css'
+import { Homepage } from './Components/Homepage'
 
 function App() {
 
   return (
     <div className="App">
-      <img src="image.png" alt="drgggrg" />
+      <Homepage/>
     </div>
   )
 }
