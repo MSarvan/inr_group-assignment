@@ -1,4 +1,8 @@
 .container img {
-    width: 455.25px;
+    width: 455px;
     height: 270px;
+}
+.btns button {
+    border: none;
+    outline: none;
 }
