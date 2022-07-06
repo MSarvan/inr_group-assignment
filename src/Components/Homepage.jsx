@@ -19,19 +19,32 @@ import msg from "./Images/Message.png";
 export const Homepage = () => {
   const [data, setData] = useState([]);
   const [showdata, setShowdata] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [size, setSize] = useState(5);
+  const [display, setDisplay] = useState([]);
+
+  const displayData = () => {
+    let temp = [...data];
+    
+    let sort = temp.filter((e) => {
+      return e.id > page && e.id <= size;
+    });
+    setDisplay(sort);
+    console.log("sort", sort);
+  };
 
   useEffect(() => {
-    fetch(`http://localhost:7890/products?_limit=${size}&_page=${page}`)
+    // fetch(`http://localhost:7890/products?_limit=${size}&_page=${page}`)
+    fetch(`https://62c55fbd134fa108c2500abb.mockapi.io/data`)
       .then((res) => res.json())
       //   .then((res) => console.log(res))
       .then((res) => {
         setData(res);
+        setDisplay(res);
         setShowdata(res);
       })
       .catch((err) => console.log(err));
-  }, [page, size]);
+  }, []);
 
   return (
     <div>
@@ -44,40 +57,45 @@ export const Homepage = () => {
       <div className="btns">
         <button
           onClick={() => {
-            setPage(1);
+            setPage(0);
             setSize(20);
+            displayData();
           }}
         >
           <img src={all} alt="" className="all-btn" />
         </button>
         <button
           onClick={() => {
-            setPage(1);
+            setPage(0);
             setSize(5);
+            displayData();
           }}
         >
           <img src={menu1} alt="" />
         </button>
         <button
           onClick={() => {
-            setPage(2);
-            setSize(5);
+            setPage(5);
+            setSize(10);
+            displayData();
           }}
         >
           <img src={menu2} alt="" />
         </button>
         <button
           onClick={() => {
-            setPage(3);
-            setSize(5);
+            setPage(10);
+            setSize(15);
+            displayData();
           }}
         >
           <img src={menu3} alt="" />
         </button>
         <button
           onClick={() => {
-            setPage(4);
-            setSize(5);
+            setPage(15);
+            setSize(20);
+            displayData();
           }}
         >
           <img src={menu4} alt="" />
@@ -87,7 +105,7 @@ export const Homepage = () => {
         </div>
       </div>
       <div className="showproducts">
-        {data.map((e) => (
+        {display.map((e) => (
           <div className="products" key={e._id}>
             <img src={product} alt="" className="pro-img" />
             <div className="details">
@@ -113,9 +131,7 @@ export const Homepage = () => {
                 <p>
                   <h2>{e.price} </h2>
                 </p>
-                <p>
-                {e.currency}
-                </p>
+                <p>{e.currency}</p>
                 <img src={thumbsup} alt="" className="thumbsup" />
                 <img src={msg} alt="" className="msg" />
               </div>
@@ -123,7 +139,6 @@ export const Homepage = () => {
           </div>
         ))}
       </div>
-
       <Footer />
     </div>
   );
