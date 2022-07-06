@@ -31,9 +31,9 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-/* .all-btn:active {
+.all-btn:active {
     text-decoration: overline;
-} */
+}
 .products {
     display: flex;
     flex-direction: row;
@@ -61,9 +61,9 @@
 }
 .details {
     border: 1px solid #e5e5e5;
-    width: 350px;
+    width: 360px;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 10px;
     height: fit-content;
     border-left: none;
     border-top-right-radius: 25px;
@@ -76,7 +76,10 @@
     margin-top: -50px;
 }
 h1 {
-    margin-left: -225px;
+    margin-left: 15px;
+    margin-top: -5px;
+    /* border: 1px solid blue; */
+    width: 100px;
 }
 .des1 {
     margin-top: -50px;
@@ -85,12 +88,14 @@ h1 {
 .thumbsup {
     width: 20px;
     height: 20px;
-    margin-left: 175px;
+    margin-left: 155px;
+    cursor: pointer;
 }
 .msg {
     width: 20px;
     height: 20px;
     margin-left: 15px;
+    cursor: pointer;
 }
 .company1 {
     display: flex;
@@ -100,5 +105,4 @@ h1 {
 }
 .stars {
     margin-top: -125px;
-    /* border: 1px solid black; */
 }
