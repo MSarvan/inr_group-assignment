@@ -31,8 +31,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.all-btn:active {
-    text-decoration: overline;
+.btns button:active {
+    /* content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -10px; */
+    border-bottom: 2px solid black;
 }
 .products {
     display: flex;
