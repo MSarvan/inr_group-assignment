@@ -7,12 +7,9 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  useDisclosure,
-  Button
+  useDisclosure
 } from "@chakra-ui/react";
 import { Loginpage } from "./Loginpage";
 
@@ -20,8 +17,8 @@ export const Navbar = () => {
 
   const OverlayOne = () => (
     <ModalOverlay
-      bg="rgba(255, 255, 255, 0.4)"
-      backdropFilter="blur(5px) hue-rotate(90deg)"
+      bg="blackAlpha.300"
+      backdropFilter="blur(1px) hue-rotate(90deg)"
     />
   );
 
@@ -39,7 +36,7 @@ export const Navbar = () => {
         <Modal isCentered isOpen={isOpen} onClose={onClose}>
           {overlay}
           <ModalContent>
-            <ModalCloseButton />
+            <ModalCloseButton className="close-btn"/>
             <ModalBody>
               <Loginpage />
             </ModalBody>

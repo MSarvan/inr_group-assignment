@@ -1,12 +1,13 @@
 .loginpage-container {
     width: 476px;
     height: 550px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 30px;
     box-sizing: border-box;
     margin-top: 35px;
     margin-left: 431px;
     padding: 0px 75px;
+    background-color: #ffff;
 }
 .logo {
     display: flex;
@@ -46,4 +47,5 @@
     outline: none;
     cursor: pointer;
     border: transparent;
+    margin-left: 35px;
 }
