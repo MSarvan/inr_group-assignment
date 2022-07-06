@@ -12,6 +12,7 @@
     height: fit-content;
     background-color: #ffff;
     text-align: left;
+    cursor: pointer;
 }
 .uparr {
     background: #e4e8eb;
@@ -20,4 +21,14 @@
     width: 65px;
     box-sizing: border-box;
     padding-top: 25px;
+}
+.showproducts {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    /* border: 1px solid red; */
+    padding: 50px;
+}
+.all-btn:active {
+    text-decoration: overline;
 }

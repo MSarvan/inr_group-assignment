@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Styles/Homepage.css";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
@@ -14,32 +14,46 @@ import upArr from "./Images/Up-arr-icon.png"
 
 export const Homepage = () => {
 
-    function BasicUsage() {
-        var { isOpen, onOpen, onClose } = useDisclosure()
-        return (
-          <>
-            {/* <Button onClick={onOpen}>Open Modal</Button> */}
+    // function BasicUsage() {
+    //     var { isOpen, onOpen, onClose } = useDisclosure()
+    //     return (
+    //       <>
+    //         {/* <Button onClick={onOpen}>Open Modal</Button> */}
       
-            <Modal isOpen={isOpen} onClose={onClose}>
-              <ModalOverlay />
-              <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>
-                  <Lorem count={2} />
-                </ModalBody>
+    //         <Modal isOpen={isOpen} onClose={onClose}>
+    //           <ModalOverlay />
+    //           <ModalContent>
+    //             <ModalHeader>Modal Title</ModalHeader>
+    //             <ModalCloseButton />
+    //             <ModalBody>
+    //               <Lorem count={2} />
+    //             </ModalBody>
       
-                <ModalFooter>
-                  <Button colorScheme='blue' mr={3} onClick={onClose}>
-                    Close
-                  </Button>
-                  <Button variant='ghost'>Secondary Action</Button>
-                </ModalFooter>
-              </ModalContent>
-            </Modal>
-          </>
-        )
-      }
+    //             <ModalFooter>
+    //               <Button colorScheme='blue' mr={3} onClick={onClose}>
+    //                 Close
+    //               </Button>
+    //               <Button variant='ghost'>Secondary Action</Button>
+    //             </ModalFooter>
+    //           </ModalContent>
+    //         </Modal>
+    //       </>
+    //     )
+    //   }
+
+    const [data, setData] = useState([]);
+    const [showdata, setShowdata] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:7890/products`)
+      .then((res) => res.json())
+      .then((res) => console.log(res))
+      .then((res) => {
+        setData(res);
+        setShowdata(res);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <div>
@@ -47,15 +61,18 @@ export const Homepage = () => {
       <div className="container">
         <img src={img1} alt="1" />
         <img src={img2} alt="2" />
-        <img src={img3} alt="3" onClick={onOpen}/>
+        <img src={img3} alt="3" />
       </div>
       <div className="btns">
-        <button><img src={all} alt="" /></button>
+        <button><img src={all} alt="" className="all-btn"/></button>
         <button><img src={menu1} alt="" /></button>
         <button><img src={menu2} alt="" /></button>
         <button><img src={menu3} alt="" /></button>
         <button><img src={menu4} alt="" /></button>
         <div className="uparr"><img src={upArr} alt=""/></div>
+      </div>
+      <div className="showproducts">
+
       </div>
       <Footer />
     </div>
