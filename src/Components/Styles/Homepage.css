@@ -26,9 +26,10 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding: 50px;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 /* .all-btn:active {
     text-decoration: overline;
@@ -36,14 +37,68 @@
 .products {
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    margin-bottom: 25px;
+    padding: 20px;
+    font-size: 13px;
+    align-items: center;
 }
 .price-details {
     display: flex;
-    flex-direction: row;
+    /* border: 1px solid blue; */
+    height: 25px;
+    margin-top: 15px;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 25px;
 }
 .pro-img {
     width: 146px;
-    height: 200px;
-    border: 1px solid yellow;
+    height: 231px;
+    border: 1px solid #e5e5e5;
+    padding: 25px;
+    border-radius: 25px;
+}
+.details {
+    border: 1px solid #e5e5e5;
+    width: 350px;
+    box-sizing: border-box;
+    padding: 5px;
+    height: fit-content;
+    border-left: none;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.company {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-top: -50px;
+}
+h1 {
+    margin-left: -225px;
+}
+.des1 {
+    margin-top: -50px;
+    margin-left: 5px;
+}
+.thumbsup {
+    width: 20px;
+    height: 20px;
+    margin-left: 175px;
+}
+.msg {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+.company1 {
+    display: flex;
+    align-items: center;
+    margin-top: -40px;
+    margin-left: 18px;
+}
+.stars {
+    margin-top: -125px;
+    /* border: 1px solid black; */
 }

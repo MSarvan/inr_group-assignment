@@ -11,6 +11,10 @@ import menu2 from "./Images/Group 12029.png";
 import menu3 from "./Images/Group 12030.png";
 import menu4 from "./Images/Group 12031.png";
 import upArr from "./Images/Up-arr-icon.png";
+import product from "./Images/Product.png";
+import thumbsup from "./Images/Thumbsup.png";
+import stars from "./Images/Stars.png";
+import msg from "./Images/Message.png";
 
 export const Homepage = () => {
   const [data, setData] = useState([]);
@@ -27,7 +31,7 @@ export const Homepage = () => {
         setShowdata(res);
       })
       .catch((err) => console.log(err));
-  }, [page]);
+  }, [page, size]);
 
   return (
     <div>
@@ -38,19 +42,44 @@ export const Homepage = () => {
         <img src={img3} alt="" />
       </div>
       <div className="btns">
-        <button onClick={() => setSize(20)}>
+        <button
+          onClick={() => {
+            setPage(1);
+            setSize(20);
+          }}
+        >
           <img src={all} alt="" className="all-btn" />
         </button>
-        <button onClick={() => setPage(1)}>
+        <button
+          onClick={() => {
+            setPage(1);
+            setSize(5);
+          }}
+        >
           <img src={menu1} alt="" />
         </button>
-        <button onClick={() => setPage(2)}>
+        <button
+          onClick={() => {
+            setPage(2);
+            setSize(5);
+          }}
+        >
           <img src={menu2} alt="" />
         </button>
-        <button onClick={() => setPage(3)}>
+        <button
+          onClick={() => {
+            setPage(3);
+            setSize(5);
+          }}
+        >
           <img src={menu3} alt="" />
         </button>
-        <button onClick={() => setPage(4)}>
+        <button
+          onClick={() => {
+            setPage(4);
+            setSize(5);
+          }}
+        >
           <img src={menu4} alt="" />
         </button>
         <div className="uparr">
@@ -60,34 +89,35 @@ export const Homepage = () => {
       <div className="showproducts">
         {data.map((e) => (
           <div className="products" key={e._id}>
-            <img src={e.proimage} alt="" className="pro-img" />
-            <div>
-              <h3>{e.name}</h3>
-              <p>
-                <span>By </span>
-                <span>
-                  <h4>{e.company}</h4>
-                </span>
-              </p>
+            <img src={product} alt="" className="pro-img" />
+            <div className="details">
+              <h1>{e.name}</h1>
+              <div className="company">
+                <p>By&#160;</p>
+                <p>
+                  <h4> {e.company}</h4>
+                </p>
+              </div>
               <br />
-              <p>{e.description1}</p>
-              <p>
-                <span>{e.description2}</span>
-                <span>
+              <br />
+              <p className="des1">{e.description1}</p>
+              <div className="company1">
+                <p>{e.description2}&#160;</p>
+                <p>
                   <h4>{e.read}</h4>
-                </span>
-              </p>
+                </p>
+              </div>
               <br />
-              <img src={e.stars} alt="" />
+              <img src={stars} alt="" className="stars" />
               <div className="price-details">
                 <p>
-                  <span>
-                    <h3>{e.price} </h3>
-                  </span>
-                  <span>{e.currency}</span>
+                  <h2>{e.price} </h2>
                 </p>
-                <img src={e.thumbsup} alt="" />
-                <img src={e.message} alt="" />
+                <p>
+                {e.currency}
+                </p>
+                <img src={thumbsup} alt="" className="thumbsup" />
+                <img src={msg} alt="" className="msg" />
               </div>
             </div>
           </div>

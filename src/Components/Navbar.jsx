@@ -17,8 +17,8 @@ export const Navbar = () => {
 
   const OverlayOne = () => (
     <ModalOverlay
-      bg="blackAlpha.300"
-      backdropFilter="blur(1px) hue-rotate(90deg)"
+      bg="rgba(0, 0, 0, 0.64)"
+      backdropFilter="blur(5px) hue-rotate(90deg)"
     />
   );
 

@@ -28,6 +28,7 @@
     height: 25.49px;
     margin-top: 29px;
     margin-left: 405px;
+    cursor: pointer;
 }
 .close-btn {
     width: 50px;
@@ -36,4 +37,5 @@
     outline: none;
     margin-left: 1325px;
     cursor: pointer;
+    color: #ffff;
 }
