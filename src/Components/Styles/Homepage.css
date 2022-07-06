@@ -1,5 +1,5 @@
 .container img {
-    width: 455px;
+    width: 448px;
     height: 270px;
 }
 .btns {
@@ -26,9 +26,24 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     padding: 50px;
+    flex-wrap: wrap;
 }
-.all-btn:active {
+/* .all-btn:active {
     text-decoration: overline;
+} */
+.products {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+}
+.price-details {
+    display: flex;
+    flex-direction: row;
+}
+.pro-img {
+    width: 146px;
+    height: 200px;
+    border: 1px solid yellow;
 }
